@@ -26,10 +26,8 @@ RUN groupadd -g $GID minecraft && \
 
 RUN echo "minecraft ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-# ADD ./lib/scripts/spigot_init.sh /spigot_init.sh
 ADD ./minecraft/ /minecraft/
 
-# RUN chmod +x /spigot_init.sh
 RUN chmod +x /minecraft/start.sh
 
 USER minecraft

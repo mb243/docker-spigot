@@ -126,3 +126,5 @@ docker network connect --ip=172.36.0.3 my_network spigot
 # Technical information about this image
 
 `start.sh` is set as the ENTRYPOINT in the Dockerfile. `start.sh` will `exec` java to make it PID 1, which allows it to receive SIGTERM from Docker and shut down gracefully whenever possible.
+
+`start.sh` lives on the volume. You can edit it to run additional commands at startup. If you break it, simply delete it and deploy a new container, and it will be replaced with the version from the image. Or, just replace it with [this one](https://github.com/mb243/docker-spigot/blob/master/images/ubuntu/minecraft/start.sh).

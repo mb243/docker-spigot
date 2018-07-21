@@ -17,7 +17,11 @@ You will need the image in order to run this server. You can either build it fro
 
 ### Pulling from Docker Hub
 
-This is the preferred way, and is done automatically. You can skip the "Building from GitHub" section below unless you're unable to pull from Docker Hub and need to build it manually.
+**This is the preferred way, and is done automatically without any extra steps. If you like the easy way, just skip down to 'Running' below.** You can skip the "Building from GitHub" section below unless you're unable to pull from Docker Hub and need to build it manually. If you really want to pull the image manually, run:
+
+```
+docker pull mb101/docker-spigot
+```
 
 ### Building from GitHub
 

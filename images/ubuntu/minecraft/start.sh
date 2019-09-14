@@ -23,6 +23,7 @@ build_spigot_jar() {
   # only build if jar file does not exist
   if [ ! -f /minecraft/spigot.jar ]; then
     echo "Building spigot jar file, this will take a few minutes..."
+    rm -rf /minecraft/build
     mkdir -p /minecraft/build && cd /minecraft/build
     curl -o BuildTools.jar -L \
       https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
